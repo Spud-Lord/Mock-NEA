@@ -4,6 +4,7 @@ from room import Room
 from character import Character, Enemy
 from item import Item
 from introduction import Intro
+from callingcode import Call
 import time
 import os
 import sys
@@ -23,10 +24,6 @@ def type2(string):
         sys.stdout.flush()
         time.sleep(0.75)
     sys.stdout.write("\n")
-
-##mixer.init()
-##mixer.music.load("Battle.Of.The.Heroes_1.mp3")
-##mixer.music.play()
 
 Intro()
 
@@ -53,7 +50,43 @@ customers = Character("Customers", "Fellow customers of the supermarket. Absent 
 customers.set_conversation("Oh excuse me!")
 second_room.set_character(customers)
 
-friend = ("Eve","Quite literally one of the only people you can trust now. You would give your life for her.")
+friend = Character("Eve","Quite literally one of the only people you can trust now. You would give your life for her.")
 friend.set_conversation("Go on! Solve the puzzle! Your clever enough!")
 forth_room.set_character(friend)
 
+crew_member = Character("Crew Member from the Aorus","One of the seven crew members from your ship, the Aorus")
+crew_member.set_conversation("Watch out Sir. We are picking up some strange stuff approaching our position quickly.")
+fifth_room.set_character(crew_member)
+
+mixer.init()
+mixer.music.load("Battle.Of.The.Heroes.mp3")
+mixer.music.play()
+
+current_room = first_room
+inventory = []
+
+dead = False
+
+while dead == False:
+    type("You suddenly find youself focusing on one memory...\n")
+
+    current_room.get_details()
+
+    print(" ")
+
+    type("You can't figure out why the people want to see this memory")
+    time.sleep(2)
+    type("Despite that, you walked forward toward the castle before being hit by one of the guards.")
+    time.sleep(2)
+    type("'We are embracing the future now.' they said.")
+    time.sleep(2)
+    type("You are confused. But before you could say anything the guard spoke again 'In order to enter, you must answer the question on the door.'")
+    time.sleep(2)
+    type("You were about to protest again but the guard cut you up.")
+    time.sleep(2)
+    type("'Answer it otherwise you will not enter!' said the Guard. You sigh and look around. There aren't many people but your friend is inside waiting for you. You walk over to the door and read the question.\n")
+    time.sleep(2)
+    type("What is Hardware and Software?\n")
+    time.sleep(2)
+    type("a: Hardware is the term used to describe the physical components of the computer whereas software are the non-physical programs that are stored on the computer's hardware\n")
+    
