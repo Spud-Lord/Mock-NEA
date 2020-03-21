@@ -23,7 +23,7 @@ def type2(string):
 
 def Death():
     mixer.init()
-    mixer.music.load("imperial.alert.mp3")
+    mixer.music.load("imperial_alert.mp3")
     mixer.music.play(5)
 
     type("'Critical Failure!' you hear a voice shout")
@@ -40,7 +40,7 @@ def Death():
     time.sleep(2)
     type("You collapse onto the cold solid floor beneath you and pant heavily")
     time.sleep(2)
-    type("'You resisted.' said a woman above you. You try to look up at the woman")
+    type("'You resisted. You changed the memory.' said a woman above you. You try to look up at the woman")
     time.sleep(2)
     type("'I am sorry. But unless you follow our orders, you can not live.' you can just make out a gun pointing at your head")
     time.sleep(2)

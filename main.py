@@ -71,7 +71,11 @@ dead = False
 while dead == False:
     type("You suddenly find youself focusing on one memory...\n")
 
+    time.sleep(2)
+
     current_room.get_details()
+
+    time.sleep(4)
 
     print(" ")
 
@@ -96,16 +100,16 @@ while dead == False:
     type("c: Hardware you can slap, software you can hit\n")
     time.sleep(2)
     type("d: Hardware and software doesn't exist... Duh!\n")
-    answer1 = input(">> ")
-    if answer1 != ("a") or ("A"):
+    answer1 = input("")
+    if answer1 != "a" or "A":
         type("'Incorrect! The correct answer is a!'")
         time.sleep(2)
-        type("The guard raises his sword and cuts you down where you stand...")
+        type("The guard raises his sword and cuts you down where you stand...\n")
         time.sleep(2)
         Death()
         dead = True
 
-    elif answer1 == ("a") or ("A"):
+    elif answer1 == "a" or "A":
         type("'Well done.' said the guard. He pushed open the door and you enter the castle ruins")
         time.sleep(2)
         type("You look around and see your friend on the top of the ruins taking selfies")
@@ -122,7 +126,7 @@ while dead == False:
         if answer2 != ("true") or ("True"):
             type("'Incorrect! They are precompiled!'")
             time.sleep(2)
-            type("The guard spins their spear and impales you...")
+            type("The guard spins their spear and impales you...\n")
             time.sleep(2)
             Death()
             dead = True
@@ -148,7 +152,7 @@ while dead == False:
                 time.sleep(2)
                 type("The guard grabs you by the wrist and drags you to the wall")
                 time.sleep(2)
-                type("The guard lifts you up and throws you over the wall...")
+                type("The guard lifts you up and throws you over the wall...\n")
                 time.sleep(2)
                 Death()
                 dead = True
