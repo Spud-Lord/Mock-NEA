@@ -79,18 +79,18 @@ while dead == False:
 
     print(" ")
 
-    type("You can't figure out why the people want to see this memory")
-    time.sleep(2)
-    type("Despite that, you walked forward toward the castle before being hit by one of the guards.")
-    time.sleep(2)
-    type("'We are embracing the future now.' they said.")
-    time.sleep(2)
-    type("You are confused. But before you could say anything the guard spoke again 'In order to enter, you must answer the question on the door.'")
-    time.sleep(2)
-    type("You were about to protest again but the guard cut you up.")
-    time.sleep(2)
-    type("'Answer it otherwise you will not enter!' said the Guard. You sigh and look around. There aren't many people but your friend is inside waiting for you. You walk over to the door and read the question.\n")
-    time.sleep(2)
+##    type("You can't figure out why the people want to see this memory")
+##    time.sleep(2)
+##    type("Despite that, you walk forward toward the castle before being hit by one of the guards.")
+##    time.sleep(2)
+##    type("'We are embracing the future now.' they said.")
+##    time.sleep(2)
+##    type("You are confused. But before you could say anything the guard spoke again 'In order to enter, you must answer the question on the door.'")
+##    time.sleep(2)
+##    type("You were about to protest again but the guard cut you up.")
+##    time.sleep(2)
+##    type("'Answer it otherwise you will not enter!' said the Guard. You sigh and look around. There aren't many people but your friend is inside waiting for you. You walk over to the door and read the question with the guard standing right beside you.\n")
+##    time.sleep(2)
     type("What is Hardware and Software?\n")
     time.sleep(2)
     type("a: Hardware is the term used to describe the physical components of the computer whereas software is the non-physical programs that are stored on the computer's hardware\n")
@@ -101,7 +101,7 @@ while dead == False:
     time.sleep(2)
     type("d: Hardware and software doesn't exist... Duh!\n")
     answer1 = input("")
-    if answer1 != "a" or "A":
+    if answer1 != "a":
         type("'Incorrect! The correct answer is a!'")
         time.sleep(2)
         type("The guard raises his sword and cuts you down where you stand...\n")
@@ -109,21 +109,21 @@ while dead == False:
         Death()
         dead = True
 
-    elif answer1 == "a" or "A":
+    elif answer1 == "a":
         type("'Well done.' said the guard. He pushed open the door and you enter the castle ruins")
-        time.sleep(2)
-        type("You look around and see your friend on the top of the ruins taking selfies")
-        time.sleep(2)
-        type("You sigh and turn to move towards the stairs. But when you arrive at them, you are met with another guard")
-        time.sleep(2)
-        type("'Come on what is the question?' you ask. The guard smiled and pointed to the sign they were holding")
-        time.sleep(2)
-        type("You look at the sign:\n")
+##        time.sleep(2)
+##        type("You look around and see your friend on the top of the ruins taking selfies")
+##        time.sleep(2)
+##        type("You sigh and turn to move towards the stairs. But when you arrive at them, you are met with another guard")
+##        time.sleep(2)
+##        type("'Come on what is the question?' you ask. The guard smiled and pointed to the sign they were holding")
+##        time.sleep(2)
+##        type("You look at the sign:\n")
         time.sleep(2)
         type("True or False? Library Files are non-compiled files which run when they are needed by a program")
         time.sleep(2)
-        answer2 = input(">> ")
-        if answer2 != ("true") or ("True"):
+        answer2 = input("")
+        if answer2 != "True":
             type("'Incorrect! They are precompiled!'")
             time.sleep(2)
             type("The guard spins their spear and impales you...\n")
@@ -131,7 +131,7 @@ while dead == False:
             Death()
             dead = True
 
-        elif answer2 == ("false") or ("False"):
+        elif answer2 == "False":
             type("'Correct. You may pass.' said the guard moving aside")
             time.sleep(2)
             type("You quickly move up the stairs only to met with yet another guard. Rolling your eyes, you read the question on their sign\n")
@@ -146,7 +146,7 @@ while dead == False:
             time.sleep(2)
             type("d: Compilers, Interpreters and Translators\n")
             time.sleep(2)
-            answer3 = input(">> ")
+            answer3 = input("")
             if answer3 != ("c") or ("C"):
                 type("'Incorrect, the answer is C!'")
                 time.sleep(2)
@@ -160,7 +160,7 @@ while dead == False:
             elif answer3 == ("c") or ("C"):
                 type("'Well done. Go on.' said the guard moving aside")
                 time.sleep(2)
-                type("You walk up and look around. You see your friend and some other items. You remeber the castle rules saying whatever you find, you can take")
+                type("You walk up and look around. You see your friend and some other items. You remember the castle rules saying whatever you find, you can take. It is going to be taken down soon anyway\n")
                 Call()
                      
 
