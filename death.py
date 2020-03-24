@@ -53,4 +53,4 @@ def Death():
     type("You don't even feel yourself hit the ground...")
     time.sleep(2)
     type2("You feel nothing...")
-    sys.exit()
+    break
