@@ -26,7 +26,7 @@ def type2(string):
         time.sleep(0.75)
     sys.stdout.write("\n")
 
-Intro()
+#Intro()
 
 first_room = Room("The old ruins of an ancient Castle")
 first_room.set_description("You recognise the old castle as the place you lost your friend. She fell from the tallest tower. The castle has remained closed ever since. But wasn't it destroyed recently?")
@@ -123,7 +123,7 @@ while dead == False:
         type("True or False? Library Files are non-compiled files which run when they are needed by a program")
         time.sleep(2)
         answer2 = input("")
-        if answer2 != "True":
+        if answer2 == "True":
             type("'Incorrect! They are precompiled!'")
             time.sleep(2)
             type("The guard spins their spear and impales you...\n")
@@ -147,7 +147,7 @@ while dead == False:
             type("d: Compilers, Interpreters and Translators\n")
             time.sleep(2)
             answer3 = input("")
-            if answer3 != ("c") or ("C"):
+            if answer3 != "c":
                 type("'Incorrect, the answer is C!'")
                 time.sleep(2)
                 type("The guard grabs you by the wrist and drags you to the wall")
@@ -157,7 +157,7 @@ while dead == False:
                 Death()
                 dead = True
 
-            elif answer3 == ("c") or ("C"):
+            elif answer3 == "c":
                 type("'Well done. Go on.' said the guard moving aside")
                 time.sleep(2)
                 type("You walk up and look around. You see your friend and some other items. You remember the castle rules saying whatever you find, you can take. It is going to be taken down soon anyway\n")
