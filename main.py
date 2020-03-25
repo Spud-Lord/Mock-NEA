@@ -161,6 +161,7 @@ while dead == False:
                 type("'Well done. Go on.' said the guard moving aside")
                 time.sleep(2)
                 type("You walk up and look around. You see your friend and some other items. You remember the castle rules saying whatever you find, you can take. It is going to be taken down soon anyway\n")
+                Call()
                 
                      
 
