@@ -5,7 +5,7 @@ from character import Character, Enemy
 from item import Item
 from introduction import Intro
 from callingcode import Call
-from death import Death
+from death import Death, Death2
 import time
 import os
 import sys
@@ -593,6 +593,47 @@ Q = 1""")
     elif answer15.lower() == "machine code" or "assembly language":
         type("Test Subject 66 succeeded secondary injections.")
         time.sleep(2)
+        type("'What is your name?' one of them asked")
+        name = input(">> ")
+        type("My name is "+ name +".")
+        time.sleep(2)
+        type("'Just so you know we were just testing your brain acitivity with that question.' he said")
+        time.sleep(2)
+        type("'The augmentation was successful. We just have one more injection sequence to run then we can run other tests'")
+        time.sleep(2)
+        type("'This last sequence will be painless. Just relax.' continued the person")
+        time.sleep(2)
+        type("You close your eyes again and wait for the final step to complete...")
+
+    time.sleep(4)
+    type("Your eyes fly open and you scream in pain as the neural implant is removed from your neck")
+    time.sleep(2)
+    type(name+"'!' said a woman's voice")
+    time.sleep(2)
+    type("'Thank you!' the woman said")
+    time.sleep(2)
+    type("You open your eyes to see the woman you saw earlier. You realise that you are no longer in the machine")
+    time.sleep(2)
+    type("Still equipped into the machine though you breath heavily trying to catch your breath")
+    time.sleep(2)
+    type("'A deal is a deal. Get me out and remove the memory' you say")
+    time.sleep(2)
+    type("The woman nods and goes to get something. You wait for her to return")
+    time.sleep(2)
+    type("When she does return, she has something behind her back")
+    time.sleep(2)
+    type("'We have identified the scientists who experimented on you in our database through their voices.' she said")
+    time.sleep(2)
+    type("'We would like to thank you for your cooperation.' the woman said")
+    time.sleep(2)
+    type("'Why was I on this station in the memory?' you ask")
+    time.sleep(2)
+    type("'It appears that it was this very station where you became you. As such, we have what we need.' the woman said")
+    time.sleep(2)
+    type("'It is time for us to help you and remove the memory from your mind.'")
+    time.sleep(2)
+    type("You await for something to happen...")
+    Death2()
 
 ##while dead == True:
 ##    Menu()
