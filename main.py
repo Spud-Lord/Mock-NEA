@@ -4,7 +4,6 @@ from room import Room
 from character import Character, Enemy
 from item import Item
 from introduction import Intro
-from callingcode import Call
 from death import Death, Death2
 import time
 import os
@@ -288,7 +287,7 @@ E = 0""")
     time.sleep(2)
     type("You try to remember what a Half Adder ...")
     time.sleep(2)
-    type("You remember it has a AND Gate... but what is the other one?
+    type("You remember it has a AND Gate... but what is the other one?")
     time.sleep(2)
     type("What is the other Logic Gate used to complete the Half Adder? (Just type the Logic Gate)")
     answer7 = input("")
