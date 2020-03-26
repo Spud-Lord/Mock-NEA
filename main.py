@@ -2,7 +2,7 @@
 
 from room import Room
 from introduction import Intro
-from death import Death, Death2
+from death import Death
 from victory import Victory
 import time
 import os
