@@ -1,8 +1,6 @@
 #Jake Eaton
 
 from room import Room
-from character import Character, Enemy
-from item import Item
 from introduction import Intro
 from death import Death, Death2
 from victory import Victory
@@ -353,7 +351,7 @@ E = 0""")
                     type("Seeing no hope, you stand up and leave...")
                     Death()
 
-                elif answer10.lower() == "opcode and operand" or "opcode operand" or "opcode, operand" or "operand, opcode" or "operand opcode" or "operand and opcode":
+                elif answer10.lower() == "opcode and operand":
                     type("Almost there...")
                     time.sleep(2)
                     type("Just another couple questions:")
