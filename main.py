@@ -451,6 +451,61 @@ E = 0""")
     type("You concentrate and let the memories flow...")
 
     current_room = forth_room
+
+    type("You prayed this was the last memory...\n")
+
+    current_room.get_details()
+
+    time.sleep(2)
+    type("No")
+    time.sleep(2)
+    type("Why?")
+    time.sleep(2)
+    type("Why would they choose this memory?")
+    time.sleep(2)
+    type("You look at the person sitting opposite you and recognise her")
+    time.sleep(2)
+    type("Eve. The woman who betrayed your heart")
+    time.sleep(2)
+    type("You wanted nothing more than to lunge at her and kill her...")
+    time.sleep(2)
+    type("But you knew you had to let the memory flow")
+    time.sleep(2)
+    type("You can't change the past...")
+    time.sleep(2)
+    type("One of the waiters walk up to you")
+    time.sleep(2)
+    type("'Excuse me Sir, we appear to be having trouble with our card machine.' the waiter said")
+    time.sleep(2)
+    type("'I don't think you will be able to pay by card' the waiter continued")
+    time.sleep(2)
+    type("You take the machine and use your screwdrivers in your pocket to open the back")
+    time.sleep(2)
+    type("There was a puzzle...")
+    time.sleep(2)
+    type("'Well this is confusing.' you say. You show Eve and she smiles")
+    time.sleep(2)
+    type("'Go on! You can solve it!' she says")
+    time.sleep(2)
+    type("You look at the puzzle again:")
+    time.sleep(2)
+    type("The Output (Q) is 1")
+    type("Work out what the input D has to be for the output to be True")
+    type("Q = (NOT ( C OR (A AND B))) AND (XOR ( F ( D NAND E)))")
+    type("""A = 1
+B = 0
+C = 0
+E = 1
+F = 1
+Q = 1""")
+    answer14 = input("")
+    if answer14 != "1":
+        type("You attempt to fix the puzzle...")
+        time.sleep(2)
+        type("Your input failed...")
+        time.sleep(2)
+        type("With
+        Death()
         
 
 ##while dead == True:
