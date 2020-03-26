@@ -8,7 +8,7 @@ def type(string):
     for char in string:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.02)
+        time.sleep(0.04)
     sys.stdout.write("\n")
 
 def Intro():
