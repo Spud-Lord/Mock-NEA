@@ -4,25 +4,12 @@ from room import Room
 from introduction import Intro
 from death import Death
 from victory import Victory
+from typing import type, type2
 import time
 import os
 import sys
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 from pygame import mixer
-
-def type(string):
-    for char in string:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.04)
-    sys.stdout.write("\n")
-
-def type2(string):
-    for char in string:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.75)
-    sys.stdout.write("\n")
 
 Intro()
 
@@ -166,9 +153,11 @@ while dead == False:
     current_room = second_room
 
     type("You suddenly find youself focusing on another memory...\n")
+    time.sleep(2)
 
     current_room.get_details()
 
+    time.sleep(4)
     type("You realise you have a briefcase in your hand. You notice the freezer and walk over there. Passing the two shoppers that were down the same isle. You kneel down next to the control panel and look at it")
     time.sleep(2)
     type("Unscrewing the cover revealed just what you were looking for. The connector to link up your laptop with the controls")
@@ -184,7 +173,7 @@ while dead == False:
     type("Work out the output of this equation:\n")
     time.sleep(2)
     type("Output = (Not(A AND B)) OR (NAND (XOR C D)E)")
-    type(""" = 1
+    type(""" A= 1
 B = 0
 C = 1
 D = 1
@@ -249,16 +238,18 @@ E = 0""")
                 type("You quickly pack up the laptop and leave...")
 
     current_room = third_room
+    time.sleep(2)
 
     type("Yet another memory was filling your brain...\n")
 
+    time.sleep(4)
     current_room.get_details()
 
     type("Why on earth do they want this memory?")
     time.sleep(2)
     type("Sitting at your desk, you plugged all the cables, inserted the RAM and placed the AMTel CPU in the socket")
     time.sleep(2)
-    type("Upon attempting to boot it, you realise what was wrong")
+    type("Upon attempting to boot it, you remember what was wrong")
     time.sleep(2)
     type("Some of its Half Adders were not functioning correctly")
     time.sleep(2)
@@ -356,7 +347,7 @@ E = 0""")
                     time.sleep(2)
                     type("Just another couple questions:")
                     time.sleep(2)
-                    type("True or False? Another name of Imperative Language is Procedural Language")
+                    type("True or False? Another name for Imperative Language is Procedural Language")
                     answer11 = input("")
                     if answer11.lower() != "true":
                         type("Suddenly your door opens. Your boss is standing there")
@@ -412,7 +403,7 @@ E = 0""")
                                 type("Seeing no hope, you stand up and leave...")
                                 Death()
 
-                            elif answer13.lower == "object code":
+                            elif answer13.lower() == "object code":
                                 type("The paper is finished")
                                 time.sleep(2)
                                 type("'That wasn't so bad' you think to yourself")
@@ -429,9 +420,11 @@ E = 0""")
     type("You concentrate and let the memories flow...")
 
     current_room = forth_room
+    time.sleep(2)
 
     type("You prayed this was the last memory...\n")
 
+    time.sleep(4)
     current_room.get_details()
 
     time.sleep(2)
@@ -510,6 +503,7 @@ Q = 1""")
         type("You close your eyes...")
 
     current_room = fifth_room
+    time.sleep(2)
 
     type("'I found it!' shouted a voice")
     time.sleep(2)
@@ -520,7 +514,7 @@ Q = 1""")
 
     current_room.get_details()
 
-    time.sleep(2)
+    time.sleep(4)
     type("Breathing calmly, you lean your head back to not see what is going on")
     time.sleep(2)
     type("Held tightly against a weird looking machine, you suddenly find youself being rotated backwards so you are led down")
@@ -557,9 +551,9 @@ Q = 1""")
     time.sleep(2)
     type("When it finally did stop, one of the people asked you a question:")
     time.sleep(2)
-    type("What is an example of a Low-Level Programming Language?")
+    type("Is Machine Code an exmaple of a Low-Level Programming Language? Yes or No?")
     answer15 = input("")
-    if answer15.lower() != "machine code" or "assembly language":
+    if answer15.lower() != "yes":
         type("'Test Subject 66 failed. Begin Termination Sequence!' shouted the voice")
         time.sleep(2)
         type("'Wait!' you shout. But it is no use")
@@ -568,16 +562,16 @@ Q = 1""")
         time.sleep(2)
         Death()
 
-    elif answer15.lower() == "machine code" or "assembly language":
-        type("Test Subject 66 succeeded secondary injections.")
+    elif answer15.lower() == "yes":
+        type("'Test Subject 66 succeeded secondary injections.'")
         time.sleep(2)
         type("'What is your name?' one of them asked")
         name = input(">> ")
-        type("My name is "+ name +".")
+        type("'My name is "+ name +".'")
         time.sleep(2)
         type("'Just so you know we were just testing your brain acitivity with that question.' he said")
         time.sleep(2)
-        type("'The augmentation was successful. We just have one more injection sequence to run then we can run other tests'")
+        type("'The augmentation was successful. We just have one more injection sequence to run then we can complete other tests'")
         time.sleep(2)
         type("'This last sequence will be painless. Just relax.' continued the person")
         time.sleep(2)
@@ -586,13 +580,15 @@ Q = 1""")
     time.sleep(4)
     type("Your eyes fly open and you scream in pain as the neural implant is removed from your neck")
     time.sleep(2)
-    type(name+"'!' said a woman's voice")
+    type("'"+name+"!' said a woman's voice")
     time.sleep(2)
     type("'Thank you!' the woman said")
     time.sleep(2)
-    type("You open your eyes to see the woman you saw earlier. You realise that you are no longer in the machine")
+    type("You open your eyes to see the woman you saw earlier")
     time.sleep(2)
-    type("Still equipped into the machine though you breath heavily trying to catch your breath")
+    type("'Eve!' you shout. You try to lunge at her")
+    time.sleep(2)
+    type("Still equipped into the machine though, you breath heavily trying to catch your breath")
     time.sleep(2)
     type("'A deal is a deal. Get me out and remove the memory' you say")
     time.sleep(2)
