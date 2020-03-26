@@ -5,6 +5,7 @@ from character import Character, Enemy
 from item import Item
 from introduction import Intro
 from death import Death, Death2
+from victory import Victory
 import time
 import os
 import sys
@@ -31,36 +32,16 @@ first_room = Room("The old ruins of an ancient Castle")
 first_room.set_description("You recognise the old castle as the place you lost your friend. She fell from the tallest tower. The castle has remained closed ever since. But wasn't it destroyed recently?")
 
 second_room = Room("The frozen isle of a Supermarket")
-second_room.set_description("It has been nearly twenty years since you were here. Last time you were here, you messed with the temperature controls and caused all the products to defrost. You were banned from entering. But why do they want to know about this?")
+second_room.set_description("It has been nearly twenty years since you were here. Last time you were here, you messed with the temperature controls and caused all the products to defrost. You were banned from entering. But why do they want to know about this?\n")
 
 third_room = Room("An office filled with computers")
-third_room.set_description("Your first job. After succeeding at University you quickly rose the ranks to become the leader of a tech team for the GCHQ. You recognise the motherboard on your desk. You also notice a test paper you were meant to fill in weeks ago. Last time you wer here, you had to test the board and complete the test... should you do the same?")
+third_room.set_description("Your first job. After succeeding at University you quickly rose the ranks to become the leader of a tech team for the GCHQ. You recognise the motherboard on your desk. You also notice a test paper you were meant to fill in weeks ago. Last time you wer here, you had to test the board and complete the test... should you do the same?\n")
 
 forth_room = Room("A riverside resturant")
-forth_room.set_description("One of the darkest days of your life. It was here where you were betrayed. You were just enjoying a friendly meal until you started to lose your breath. Poisoned by your trusted ally... is he the key to all this?")
+forth_room.set_description("One of the darkest days of your life. It was here where you were betrayed. You were just enjoying a friendly meal until you started to lose your breath. Poisoned by your trusted ally... is he the key to all this?\n")
 
 fifth_room = Room("Artemis")
 fifth_room.set_description("You don't remember this... is this even your memory?")
-
-f_r_friend = Character("Your Friend","The puzzles have delayed you but at least you are here now.\n")
-f_r_friend.set_conversation("Hey! Come here!")
-first_room.set_character(f_r_friend)
-
-guards = Enemy("Guards", "The Guards of the Castle. There is no way you can defeat all of them. Don't talk to them too much otherwise they will take you down.\n")
-guards.set_conversation("Move along unless you want us to arrest you.")
-first_room.set_character(guards)
-
-customers = Character("Customers", "Fellow customers of the supermarket. Absent minded and quite possibly stupid, they won't notice your work of art.\n")
-customers.set_conversation("Oh excuse me!")
-second_room.set_character(customers)
-
-friend = Character("Eve","Quite literally one of the only people you can trust now. You would give your life for her.\n")
-friend.set_conversation("Go on! Solve the puzzle! Your clever enough!")
-forth_room.set_character(friend)
-
-crew_member = Character("Crew Member from the Aorus","One of the seven crew members from your ship, the Aorus\n")
-crew_member.set_conversation("Watch out Sir. We are picking up some strange stuff approaching our position quickly.")
-fifth_room.set_character(crew_member)
 
 mixer.init()
 mixer.music.load("Battle.Of.The.Heroes.mp3")
@@ -205,7 +186,7 @@ while dead == False:
     type("Work out the output of this equation:\n")
     time.sleep(2)
     type("Output = (Not(A AND B)) OR (NAND (XOR C D)E)")
-    type("""a = 1
+    type(""" = 1
 B = 0
 C = 1
 D = 1
@@ -285,7 +266,7 @@ E = 0""")
     time.sleep(2)
     type("'How do people break these things?' you think to yourself")
     time.sleep(2)
-    type("You try to remember what a Half Adder ...")
+    type("You try to remember what makes a Half Adder ...")
     time.sleep(2)
     type("You remember it has a AND Gate... but what is the other one?")
     time.sleep(2)
@@ -360,7 +341,7 @@ E = 0""")
                 time.sleep(2)
                 type("What are the two operation codes that are in Machine Code?")
                 answer10 = input("")
-                if answer10.lower() != "opcode and operand" or "opcode operand" or "opcode, operand" or "operand, opcode" or "operand opcode" or "operand and opcode":
+                if answer10.lower() != "opcode and operand":
                     type("Suddenly your door opens. Your boss is standing there")
                     time.sleep(2)
                     type("'You need to leave. Now.' she says")
@@ -632,7 +613,7 @@ Q = 1""")
     type("'It is time for us to help you and remove the memory from your mind.'")
     time.sleep(2)
     type("You await for something to happen...")
-    Death2()
+    Victory()
 
 ##while dead == True:
 ##    Menu()
