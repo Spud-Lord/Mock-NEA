@@ -12,6 +12,7 @@ def type(string):
     sys.stdout.write("\n")
 
 def Intro():
+    print("")
     type("You feel youself being dragged along the floor")
     time.sleep(2)
     type("You can't see... are you blindfolded? Or just blind?")
