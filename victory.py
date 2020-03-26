@@ -2,6 +2,7 @@
 #Victory Code
 
 import time
+from typing import type, type2
 
 def Victory():
     type("The woman pulls the device from behind her back and fires it four times")
