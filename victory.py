@@ -1,6 +1,8 @@
 #Jake Eaton
 #Victory Code
 
+import time
+
 def Victory():
     type("The woman pulls the device from behind her back and fires it four times")
     time.sleep(2)
