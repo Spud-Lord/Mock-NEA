@@ -2,7 +2,7 @@
 
 def Main_Game():
     from room import Room
-    from introduction import Intro
+    import introduction
     from death import Death
     from victory import Victory
     from typing import type, type2
@@ -14,7 +14,7 @@ def Main_Game():
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     from pygame import mixer
 
-    Intro()
+    introduction.Intro()
 
     first_room = Room("The old ruins of an ancient Castle")
     first_room.set_description("You recognise the old castle as the place you lost your friend. She fell from the tallest tower. The castle has remained closed ever since. But wasn't it destroyed recently?")
@@ -40,10 +40,9 @@ def Main_Game():
 
     dead = False
 
-    username = input("Enter your Username ")
-
     while dead == False:
         score = 0
+        print(introduction.name)
         type("You suddenly find youself focusing on one memory...\n")
 
         time.sleep(2)
@@ -83,7 +82,7 @@ def Main_Game():
             time.sleep(2)
             with open('Leaderboard.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
-                writer.writerow((username, score))
+                writer.writerow((name, score))
             Death()
             dead = True
 
