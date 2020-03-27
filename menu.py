@@ -11,7 +11,6 @@ def clear():
     if name =='nt':                                                                 #Defines the clear command for the Terminal
         _ = system('cls')
 
-
 type("Welcome\n")
 time.sleep(2)
 type("Welcome to the only Text Adventure you will ever need to play in order to learn!\n")
@@ -27,7 +26,6 @@ time.sleep(2)
 type("So let us begin!")
 time.sleep(2)
 
-#Log_In()
 
 type("Now then...")
 time.sleep(2)
