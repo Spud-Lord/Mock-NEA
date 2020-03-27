@@ -4,6 +4,7 @@
 import time
 from typing import type, type2
 from main_game import Main_Game
+from view_leaderboard import View_LB
 from os import system, name
 
 def clear():
@@ -44,8 +45,8 @@ def Main_Menu():
         clear()
         Main_Game()
 
-##    elif menu == "2":
-##        View_LB()
+    elif menu == "2":
+        View_LB()
 
     elif menu == "3":
         exit()
