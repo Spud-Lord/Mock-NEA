@@ -30,7 +30,7 @@ def Death():
     time.sleep(2)
     type("Your mind suddenly starts to flash with memories and your body aches in pain")
     time.sleep(2)
-    type("'Memory Overload! They are resisting the implant!'")
+    type("'Memory Overload! The implant is being resisted!'")
     time.sleep(2)
     type("'Release the implant! Set him free!' a woman shouts")
     time.sleep(2)
