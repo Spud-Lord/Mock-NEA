@@ -4,7 +4,12 @@
 import time
 from typing import type, type2
 from main_game import Main_Game
-from clear import Clear
+from os import system, name
+
+def clear():
+    if name =='nt':                                                                 #Defines the clear command for the Terminal
+        _ = system('cls')
+
 
 type("Welcome\n")
 time.sleep(2)
@@ -36,7 +41,7 @@ def Main_Menu():
 """)
 
     if menu == "1":
-        Clear()
+        clear()
         Main_Game()
 
 ##    elif menu == "2":
