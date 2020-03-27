@@ -2,7 +2,7 @@
 
 def Main_Game():
     from room import Room
-    import introduction
+    from introduction import Intro
     from death import Death
     from victory import Victory
     from typing import type, type2
@@ -14,7 +14,7 @@ def Main_Game():
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     from pygame import mixer
 
-    introduction.Intro()
+    Intro()
 
     first_room = Room("The old ruins of an ancient Castle")
     first_room.set_description("You recognise the old castle as the place you lost your friend. She fell from the tallest tower. The castle has remained closed ever since. But wasn't it destroyed recently?")
@@ -26,7 +26,7 @@ def Main_Game():
     third_room.set_description("Your first job. After succeeding at University you quickly rose the ranks to become the leader of a tech team for the GCHQ. You recognise the motherboard on your desk. You also notice a test paper you were meant to fill in weeks ago. Last time you wer here, you had to test the board and complete the test... should you do the same?\n")
 
     forth_room = Room("A riverside resturant")
-    forth_room.set_description("One of the darkest days of your life. It was here where you were betrayed. You were just enjoying a friendly meal until you started to lose your breath. Poisoned by your trusted ally... is he the key to all this?\n")
+    forth_room.set_description("One of the darkest days of your life. It was here where you were betrayed. You were just enjoying a friendly meal until you started to lose your breath. Poisoned by your trusted ally... is she the key to all this?\n")
 
     fifth_room = Room("Artemis")
     fifth_room.set_description("You don't remember this... is this even your memory?")
@@ -42,7 +42,7 @@ def Main_Game():
 
     while dead == False:
         score = 0
-        print(introduction.name)
+
         type("You suddenly find youself focusing on one memory...\n")
 
         time.sleep(2)
@@ -80,6 +80,8 @@ def Main_Game():
             time.sleep(2)
             type("The guard raises his sword and cuts you down where you stand...\n")
             time.sleep(2)
+            type("Please enter your name for the Leaderboard")
+            name = input("")
             with open('Leaderboard.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow((name, score))
@@ -106,6 +108,8 @@ def Main_Game():
                 time.sleep(2)
                 type("The guard spins their spear and impales you...\n")
                 time.sleep(2)
+                type("Please enter your name for the Leaderboard")
+                name = input("")
                 with open('Leaderboard.csv', 'a', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow((username, score))
@@ -135,6 +139,9 @@ def Main_Game():
                     type("The guard grabs you by the wrist and drags you to the wall")
                     time.sleep(2)
                     type("The guard lifts you up and throws you over the wall...\n")
+                    time.sleep(2)
+                    type("Please enter your name for the Leaderboard")
+                    name = input("")
                     with open('Leaderboard.csv', 'a', newline='') as file:
                         writer = csv.writer(file)
                         writer.writerow((username, score))
@@ -190,7 +197,7 @@ def Main_Game():
         type("Work out the output of this equation:\n")
         time.sleep(2)
         type("Output = (Not(A AND B)) OR (NAND (XOR C D)E)")
-        type(""" A= 1
+        type("""A= 1
 B = 0
 C = 1
 D = 1
@@ -202,6 +209,9 @@ E = 0""")
             type("'OI! WHAT DO YOU THINK YOU'RE DOING?' shouted a voice")
             time.sleep(2)
             type("Before you could even look up, you were shot in the back with a taser")
+            time.sleep(2)
+            type("Please enter your name for the Leaderboard")
+            name = input("")
             with open('Leaderboard.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow((username, score))
@@ -231,6 +241,9 @@ E = 0""")
                 type("'OI! WHAT DO YOU THINK YOU'RE DOING?' shouted a voice")
                 time.sleep(2)
                 type("Before you could even look up, you were shot in the back with a taser")
+                time.sleep(2)
+                type("Please enter your name for the Leaderboard")
+                name = input("")
                 with open('Leaderboard.csv', 'a', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow((username, score))
@@ -254,6 +267,9 @@ E = 0""")
                     type("'OI! WHAT DO YOU THINK YOU'RE DOING?' shouted a voice")
                     time.sleep(2)
                     type("Before you could even look up, you were shot in the back with a taser")
+                    time.sleep(2)
+                    type("Please enter your name for the Leaderboard")
+                    name = input("")
                     with open('Leaderboard.csv', 'a', newline='') as file:
                         writer = csv.writer(file)
                         writer.writerow((username, score))
@@ -305,6 +321,8 @@ E = 0""")
              type("'You have been found guilty of treason by an internal investigation and if you do not leave you will be sentenced to death'")
              time.sleep(2)
              type("Seeing no hope, you stand up and leave...")
+             type("Please enter your name for the Leaderboard")
+             name = input("")
              with open('Leaderboard.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow((username, score))
@@ -340,6 +358,8 @@ E = 0""")
                 type("'You have been found guilty of treason by an internal investigation and if you do not leave you will be sentenced to death'")
                 time.sleep(2)
                 type("Seeing no hope, you stand up and leave...")
+                type("Please enter your name for the Leaderboard")
+                name = input("")
                 with open('Leaderboard.csv', 'a', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow((username, score))
@@ -365,6 +385,8 @@ E = 0""")
                     type("'You have been found guilty of treason by an internal investigation and if you do not leave you will be sentenced to death'")
                     time.sleep(2)
                     type("Seeing no hope, you stand up and leave...")
+                    type("Please enter your name for the Leaderboard")
+                    name = input("")
                     with open('Leaderboard.csv', 'a', newline='') as file:
                         writer = csv.writer(file)
                         writer.writerow((username, score))
@@ -390,6 +412,8 @@ E = 0""")
                         type("'You have been found guilty of treason by an internal investigation and if you do not leave you will be sentenced to death'")
                         time.sleep(2)
                         type("Seeing no hope, you stand up and leave...")
+                        type("Please enter your name for the Leaderboard")
+                        name = input("")
                         with open('Leaderboard.csv', 'a', newline='') as file:
                             writer = csv.writer(file)
                             writer.writerow((username, score))
@@ -414,6 +438,8 @@ E = 0""")
                             type("'You have been found guilty of treason by an internal investigation and if you do not leave you will be sentenced to death'")
                             time.sleep(2)
                             type("Seeing no hope, you stand up and leave...")
+                            type("Please enter your name for the Leaderboard")
+                            name = input("")
                             with open('Leaderboard.csv', 'a', newline='') as file:
                                 writer = csv.writer(file)
                                 writer.writerow((username, score))
@@ -439,6 +465,8 @@ E = 0""")
                                 type("'You have been found guilty of treason by an internal investigation and if you do not leave you will be sentenced to death'")
                                 time.sleep(2)
                                 type("Seeing no hope, you stand up and leave...")
+                                type("Please enter your name for the Leaderboard")
+                                name = input("")
                                 with open('Leaderboard.csv', 'a', newline='') as file:
                                     writer = csv.writer(file)
                                     writer.writerow((username, score))
@@ -468,6 +496,8 @@ E = 0""")
                                     type("'You have been found guilty of treason by an internal investigation and if you do not leave you will be sentenced to death'")
                                     time.sleep(2)
                                     type("Seeing no hope, you stand up and leave...")
+                                    type("Please enter your name for the Leaderboard")
+                                    name = input("")
                                     with open('Leaderboard.csv', 'a', newline='') as file:
                                         writer = csv.writer(file)
                                         writer.writerow((username, score))
@@ -481,7 +511,7 @@ E = 0""")
                                     time.sleep(2)
                                     type("'That wasn't so bad' you think to yourself")
                                     time.sleep(2)
-                                    type("You stand up and go to leave...")
+                                    type("You stand up and go to leave...\n")
                                     time.sleep(2)
 
         type("'He is attempting to resist!' you hear a voice shout")
@@ -490,7 +520,7 @@ E = 0""")
         time.sleep(2)
         type("'Stop resisting! Its the only way to help you!' you hear the woman shout")
         time.sleep(2)
-        type("You concentrate and let the memories flow...")
+        type("You concentrate and let the memories flow...\n")
 
         current_room = forth_room
         time.sleep(2)
@@ -549,6 +579,8 @@ Q = 1""")
             type("Your input failed...")
             time.sleep(2)
             type("With no cash to pay for it, you are dragged away and placed in the local prison to pay for your crime")
+            type("Please enter your name for the Leaderboard")
+            name = input("")
             with open('Leaderboard.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow((username, score))
@@ -578,7 +610,7 @@ Q = 1""")
             time.sleep(2)
             type("Just before you close your eyes, you just make out everyone else in the resturant pointing a gun at you as well")
             time.sleep(2)
-            type("You close your eyes...")
+            type("You close your eyes...\n")
 
         current_room = fifth_room
         time.sleep(2)
@@ -587,7 +619,7 @@ Q = 1""")
         time.sleep(2)
         type("'Focus on that memory!' replied a woman")
         time.sleep(2)
-        type("'Last memory...' you think to yourself. You don't think you can survive much longer...")
+        type("'Last memory...' you think to yourself. You don't think you can survive much longer...\n")
         time.sleep(2)
 
         current_room.get_details()
@@ -629,7 +661,7 @@ Q = 1""")
         time.sleep(2)
         type("When it finally did stop, one of the people asked you a question:")
         time.sleep(2)
-        type("Is Machine Code an exmaple of a Low-Level Programming Language? Yes or No?")
+        type("Is Machine Code an example of a Low-Level Programming Language? Yes or No?")
         answer15 = input("")
         if answer15.lower() != "yes":
             type("'Test Subject 66 failed. Begin Termination Sequence!' shouted the voice")
@@ -637,6 +669,8 @@ Q = 1""")
             type("'Wait!' you shout. But it is no use")
             time.sleep(2)
             type("Before you could do or say anything else, you are injected with another liquid and you instantly black out and stop breathing")
+            type("Please enter your name for the Leaderboard")
+            name = input("")
             with open('Leaderboard.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow((username, score))
@@ -646,13 +680,13 @@ Q = 1""")
 
         elif answer15.lower() == "yes":
             score = score + 1
-            type("'Test Subject 66 succeeded secondary injections.'")
+            type("'Test Subject 66 completed secondary injections.'")
             time.sleep(2)
             type("'What is your name?' one of them asked")
             name = input(">> ")
             type("'My name is "+ name +".'")
             time.sleep(2)
-            type("'Just so you know we were just testing your brain acitivity with that question.' he said")
+            type("'Just so you know we were just testing your brain activity with that question.' he said")
             time.sleep(2)
             type("'The augmentation was successful. We just have one more injection sequence to run then we can complete other tests'")
             time.sleep(2)
@@ -690,9 +724,11 @@ Q = 1""")
         type("'It is time for us to help you and remove the memory from your mind.'")
         time.sleep(2)
         type("You await for something to happen...")
+        type("Please enter your name for the Leaderboard")
+        name = input("")
         with open('Leaderboard.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
-                writer.writerow((username, score))
+                writer.writerow((name, score))
         Victory()
 
     while dead == True:
