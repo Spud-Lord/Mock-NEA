@@ -41,7 +41,7 @@ def Main_Menu():
 """)
 
     if menu == "1":
-        #clear()
+        clear()
         Main_Game()
 
 ##    elif menu == "2":
