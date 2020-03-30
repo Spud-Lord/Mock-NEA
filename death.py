@@ -3,8 +3,8 @@
 
 import time
 import os
-import sys
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+import sys                                          #Imports time, OS, Sys and Pygame Modules
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"   #Hides the Welcome to Pygame Message
 from pygame import mixer
 
 def type(string):
@@ -13,7 +13,7 @@ def type(string):
         sys.stdout.flush()
         time.sleep(0.04)
     sys.stdout.write("\n")
-
+                                                    #This defs will print strings in this way. When type is used instead of print, the program will now know to print each character separately wth a small time gap inbetween
 def type2(string):
     for char in string:
         sys.stdout.write(char)
@@ -21,9 +21,9 @@ def type2(string):
         time.sleep(0.75)
     sys.stdout.write("\n")
 
-def Death():
+def Death():                                        #Defines all indented code as Death
     mixer.init()
-    mixer.music.load("imperial_alert.mp3")
+    mixer.music.load("imperial_alert.mp3")          #Loads and plays the mp3 file
     mixer.music.play(5)
 
     type("'Critical Failure!' you hear a voice shout")
@@ -53,4 +53,4 @@ def Death():
     type("You don't even feel yourself hit the ground...")
     time.sleep(2)
     type2("You feel nothing...")
-    exit()
+    exit()                                          #Force Exits the program

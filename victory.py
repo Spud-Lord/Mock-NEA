@@ -25,5 +25,5 @@ def Victory():
     time.sleep(2)
     type2("Felt...")
     time.sleep(2)
-    type2("Nothing...")
+    type2("Nothing...\n")
     dead = True

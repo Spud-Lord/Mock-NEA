@@ -3,51 +3,51 @@
 def Main_Game():
     from room import Room
     from introduction import Intro
-    from death import Death
+    from death import Death                                                         #Imports Room, Intro, Death, Victory, type, type2 and Main_Menu Definitions
     from victory import Victory
     from typing import type, type2
     from menu import Main_Menu
-    import csv
+    import csv                                                                      #Imports CSV, Time, OS, Sys and Pygame Modules
     import time
     import os
     import sys
-    os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+    os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"                               #Hides Welcome to Pygame Message
     from pygame import mixer
 
-    Intro()
+    Intro()                                                                         #Calls Introduction Definition
 
     first_room = Room("The old ruins of an ancient Castle")
     first_room.set_description("You recognise the old castle as the place you lost your friend. She fell from the tallest tower. The castle has remained closed ever since. But wasn't it destroyed recently?")
 
     second_room = Room("The frozen isle of a Supermarket")
     second_room.set_description("It has been nearly twenty years since you were here. Last time you were here, you messed with the temperature controls and caused all the products to defrost. You were banned from entering. But why do they want to know about this?\n")
-
+    #This set defines each of the different rooms used in the game
     third_room = Room("An office filled with computers")
     third_room.set_description("Your first job. After succeeding at University you quickly rose the ranks to become the leader of a tech team for the GCHQ. You recognise the motherboard on your desk. You also notice a test paper you were meant to fill in weeks ago. Last time you wer here, you had to test the board and complete the test... should you do the same?\n")
 
     forth_room = Room("A riverside resturant")
     forth_room.set_description("One of the darkest days of your life. It was here where you were betrayed. You were just enjoying a friendly meal until you started to lose your breath. Poisoned by your trusted ally... is she the key to all this?\n")
 
-    fifth_room = Room("Artemis")
+    fifth_room = Room("The Artemis")
     fifth_room.set_description("You don't remember this... is this even your memory?")
 
     mixer.init()
-    mixer.music.load("Battle.Of.The.Heroes.mp3")
+    mixer.music.load("Battle.Of.The.Heroes.mp3")                                    #Plays mp3 file
     mixer.music.play(10)
 
-    current_room = first_room
+    current_room = first_room                                                       #Sets the current room as the first room
     inventory = []
 
-    dead = False
+    dead = False                                                                    #Sets dead state to be False
 
     while dead == False:
-        score = 0
+        score = 0                                                                   #Sets score to 0
 
         type("You suddenly find youself focusing on one memory...\n")
 
         time.sleep(2)
 
-        current_room.get_details()
+        current_room.get_details()                                                  #Gets details of the current room
 
         time.sleep(4)
 
@@ -74,8 +74,8 @@ def Main_Game():
         type("c: Hardware you can slap, software you can hit\n")
         time.sleep(2)
         type("d: Hardware and software doesn't exist... Duh!\n")
-        answer1 = input("")
-        if answer1.lower() != "a":
+        answer1 = input("")                                                         #Takes User answer in a input
+        if answer1.lower() != "a":                                                  #If the user is wrong, this indented code runs - This is the same throughout the whole game
             type("'Incorrect! The correct answer is a!'")
             time.sleep(2)
             type("The guard raises his sword and cuts you down where you stand...\n")
@@ -83,12 +83,12 @@ def Main_Game():
             type("Please enter your name for the Leaderboard")
             name = input("")
             with open('Leaderboard.csv', 'a', newline='') as file:
-                writer = csv.writer(file)
-                writer.writerow((name, score))
-            Death()
-            dead = True
+                writer = csv.writer(file)                                           #Appends the Leaderboard.csv File with the new Score
+                writer.writerow((name, score))                                      #Appends it using the variables name and score
+            Death()                                                                 #Calls and runs Death Definition
+            dead = True                                                             #Sets dead state to true
 
-        elif answer1.lower() == "a":
+        elif answer1.lower() == "a":                                                #If the user is correct, this code runs
             score = score + 1
             type("'Well done.' said the guard. He pushed open the door and you enter the castle ruins")
             time.sleep(2)
@@ -174,12 +174,12 @@ def Main_Game():
                     type("Lost... you stood up on the wall and prepared to jump...\n")
                     time.sleep(2)
 
-        current_room = second_room
+        current_room = second_room                                                          #Sets current room to be the second room
 
         type("You suddenly find youself focusing on another memory...\n")
         time.sleep(2)
 
-        current_room.get_details()
+        current_room.get_details()                                                          #Gets details of the current room
 
         time.sleep(4)
         type("You realise you have a briefcase in your hand. You notice the freezer and walk over there. Passing the two shoppers that were down the same isle. You kneel down next to the control panel and look at it")
@@ -201,7 +201,7 @@ def Main_Game():
 B = 0
 C = 1
 D = 1
-E = 0""")
+E = 0""")                                                                                   #The triple speech marks allow the type to go over multiple lines in list form
         answer4 = input("")
         if answer4 != "1":
             type("Your laptop suddenly shuts down")
@@ -729,9 +729,12 @@ Q = 1""")
         with open('Leaderboard.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow((name, score))
-        Victory()
+        Victory()                                               #Calls and runs the Victory Definition
+        dead = True                                             #Sets dead state to true
 
-    while dead == True:
-        Main_Menu()
-        
-
+    while dead == True:                                         #When the dead state is true, this indented code runs
+        time.sleep(3)
+        mixer.music.stop()                                      #Stops music
+        type("Thank you for playing!\n")
+        time.sleep(2)
+        Main_Menu()                                             #Calls and runs Main_Menu Definition

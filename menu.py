@@ -3,8 +3,8 @@
 
 import time
 from typing import type, type2
-from main_game import Main_Game
-from view_leaderboard import View_LB
+from main_game import Main_Game                                                     #Imports time, system and name Modules
+from view_leaderboard import View_LB                                                #Imports defined code with the names type, type 2, Main_Game and View_LB
 from os import system, name
 
 def clear():
@@ -29,28 +29,28 @@ time.sleep(2)
 
 type("Now then...")
 time.sleep(2)
-def Main_Menu():
+def Main_Menu():                                                                    #Defines all indented code as Main_Menu
     type("What do you want to do? Just type in the number of the option you want!")
     time.sleep(2)
     menu = input("""
 [1] - Start Game!
-[2] - View Leaderboard
+[2] - View Leaderboard  
 [3] - Exit Game
 
-""")
+""")                                                                                #The triple speech marks allow the Menu to go over multiple lines with only one code
 
     if menu == "1":
-        clear()
+        clear()                                                                     #Calls Clear Definition to clear Terminal Screen
         Main_Game()
 
     elif menu == "2":
-        View_LB()
+        View_LB()                                                                   #Calls View_LB Definition to view leaderboard
 
     elif menu == "3":
-        exit()
+        exit()                                                                      #Exits the game
 
     else:
         type("Please type in one of the numbers above...\n")
-        Main_Menu()
+        Main_Menu()                                                                 #Loops back round if the user doesn't enter one of the numbers
         
-Main_Menu()
+Main_Menu()                                                                         #Allows the Menu to loop

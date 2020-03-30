@@ -7,11 +7,11 @@ import sys
 def type(string):
     for char in string:
         sys.stdout.write(char)
-        sys.stdout.flush()
+        sys.stdout.flush()              #This def will print strings in this way. When type is used instead of print, the program will now know to print each character separately wth a small time gap inbetween
         time.sleep(0.04)
     sys.stdout.write("\n")
 
-def Intro():
+def Intro():                            #Defines all indented code as Intro
     print("")
     type("You feel youself being dragged along the floor")
     time.sleep(2)
@@ -36,8 +36,8 @@ def Intro():
     type("You try to look straight ahead and see a figure standing there")
     time.sleep(2)
     type("'What is your name?' the woman asked")
-    name = input(">> ")
-    type("'My name is "+name+"' you say")
+    name = input(">> ")                 #Takes an input from the user
+    type("'My name is "+name+"' you say")       #Prints the speech with the users name that they just inputted
     time.sleep(2)
     type("'Welcome to the Artemis "+name+". A science research station orbiting Jupiter.'")
     time.sleep(2)
