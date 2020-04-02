@@ -6,20 +6,8 @@ import os
 import sys                                          #Imports time, OS, Sys and Pygame Modules
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"   #Hides the Welcome to Pygame Message
 from pygame import mixer
-
-def type(string):
-    for char in string:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.04)
-    sys.stdout.write("\n")
-                                                    #This defs will print strings in this way. When type is used instead of print, the program will now know to print each character separately wth a small time gap inbetween
-def type2(string):
-    for char in string:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.75)
-    sys.stdout.write("\n")
+from typing import type, type2
+from menu import Main_Menu
 
 def Death():                                        #Defines all indented code as Death
     mixer.init()
@@ -53,4 +41,4 @@ def Death():                                        #Defines all indented code a
     type("You don't even feel yourself hit the ground...")
     time.sleep(2)
     type2("You feel nothing...")
-    exit()                                          #Force Exits the program
+    Main_Menu()                                          #Force Exits the program
