@@ -41,4 +41,4 @@ def Death():                                        #Defines all indented code a
     type("You don't even feel yourself hit the ground...")
     time.sleep(2)
     type2("You feel nothing...")
-    Main_Menu()                                          #Force Exits the program
+    exit()                                          #Force Exits the program
