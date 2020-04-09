@@ -29,7 +29,6 @@ time.sleep(2)
 
 type("Now then...")
 time.sleep(2)
-
 def Main_Menu():                                                                    #Defines all indented code as Main_Menu
     type("What do you want to do? Just type in the number of the option you want!")
     time.sleep(2)
@@ -46,7 +45,6 @@ def Main_Menu():                                                                
 
     elif menu == "2":
         View_LB()                                                                   #Calls View_LB Definition to view leaderboard
-        Main_Menu()
 
     elif menu == "3":
         exit()                                                                      #Exits the game
