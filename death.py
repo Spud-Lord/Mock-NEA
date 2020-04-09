@@ -19,7 +19,7 @@ def Death():                                        #Defines all indented code a
     time.sleep(2)
     type("'Memory Overload! The implant is being resisted!'")
     time.sleep(2)
-    type("'Release the implant! Set him free!' a woman shouts")
+    type("'Release the implant!' a woman shouts")
     time.sleep(2)
     type("You shout in pain as the neural implant is removed from the back of your neck")
     time.sleep(2)
@@ -40,4 +40,4 @@ def Death():                                        #Defines all indented code a
     type("You don't even feel yourself hit the ground...")
     time.sleep(2)
     type2("You feel nothing...")
-    exit()                                          #Force Exits the program
+    exit()                                          #Force exits the program
