@@ -3,13 +3,7 @@
 
 import time
 import sys
-
-def type(string):
-    for char in string:
-        sys.stdout.write(char)
-        sys.stdout.flush()              #This def will print strings in this way. When type is used instead of print, the program will now know to print each character separately wth a small time gap inbetween
-        time.sleep(0.04)
-    sys.stdout.write("\n")
+from typing import type, type2
 
 def Intro():                            #Defines all indented code as Intro
     print("")
